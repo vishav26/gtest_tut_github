@@ -1,0 +1,4 @@
+
+Import('envGlobal')
+envGlobal.Append(CPPPATH = ['..', '../lib'])
+envGlobal.Program('test_pow.cpp', LIBS =['libpower','libgtest','libpthread'], LIBPATH='../lib')

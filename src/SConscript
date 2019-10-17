@@ -1,0 +1,6 @@
+
+Import('envGlobal')
+envGlobal.Append(CPPPATH = ['../include'])
+library = envGlobal.StaticLibrary('power', Split('cube.cpp square.cpp'))
+envGlobal.Install('../lib', library)
+envGlobal.Program('main.cpp', LIBS=['power'], LIBPATH='../lib' )
